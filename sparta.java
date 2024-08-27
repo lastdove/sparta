@@ -1,12 +1,11 @@
 class Solution {
-    public int[] solution(long n) {
-        String s = "" + n;
-        
-        int[] answer = new int[s.length()];
-        
-        for(int i = 0; i < answer.length; i++){
-            answer[i] = (int) n % 10;
-            n/=10;
+    public int solution(String s) {
+        int answer = 0;
+        try {
+            answer = Integer.parseInt(s);
+        }
+        catch (NumberFormatException e) {
+            e.printStackTrace();
         }
         return answer;
     }
